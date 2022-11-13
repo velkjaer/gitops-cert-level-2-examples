@@ -27,7 +27,6 @@ spec:
       destination:
         server: '{{server}}'
         namespace: '{{path.basename}}'
-		# Sync policy
 			syncPolicy:
 				syncOptions:
 					- CreateNamespace=true
