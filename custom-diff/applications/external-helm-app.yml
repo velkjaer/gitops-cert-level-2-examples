@@ -21,3 +21,16 @@ spec:
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
+
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      name: simple-deployment
+      namespace: argocd
+      jsonPointers:
+        - /metadata/annotations/creation
+    - group: ''
+      kind: Secret
+      jsonPointers:
+        - /data
+        - /stringData
